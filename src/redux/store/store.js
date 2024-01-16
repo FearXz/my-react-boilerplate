@@ -3,7 +3,7 @@ import stateReducer from "../reducers/stateReducer";
 
 const store = configureStore({
   reducer: {
-    globalState: stateReducer,
+    global: stateReducer,
   },
 });
 
