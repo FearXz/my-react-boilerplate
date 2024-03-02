@@ -19,19 +19,22 @@ const stateReducerSlice = createSlice({
 // Esporto solo l'azione definita nello slice
 export const { setFirstState } = stateReducerSlice.actions;
 export default stateReducerSlice.reducer;
+/*
+import { SET_FIRST_STATE } from "../actions";
 
-//vanilla reducer
-/* export const FETCH_JOBS = "FETCH_JOBS";
+const InitialState = {
+	firstState: "",
+};
 
-export const fetchJobsAction = (url, query) => async (dispatch) => {
-  try {
-    const response = await fetch(url + query + "&limit=20");
-
-    if (response.ok) {
-      const { data } = await response.json();
-      dispatch({ type: FETCH_JOBS, payload: data });
-    } else {
-      throw new Error("Errore nel recupero dei risultati");
-    }
-  } catch (error) {}
-}; */
+export const postReducer = (state = InitialState, action) => {
+	switch (action.type) {
+		case SET_FIRST_STATE:
+			return {
+				...state,
+				firstState: action.payload,
+			};
+		default:
+			return state;
+	}
+};
+*/
